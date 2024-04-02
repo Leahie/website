@@ -1,0 +1,13 @@
+.app ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 25vw;
+    float: right;
+}
+
+.app ul li > *{
+    text-decoration: none;
+    color: #49243E;
+}
