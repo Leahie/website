@@ -1,0 +1,13 @@
+.Description{
+    font-size: 1.1em;
+}
+.Description a{
+    text-decoration: none;
+    color: #453F78;
+    font-weight: bold;
+}
+.Description a:hover{
+    text-decoration: none;
+    color: #1B1A55;
+    font-weight: bold;
+}

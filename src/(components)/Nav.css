@@ -1,0 +1,28 @@
+.Nav{
+    
+    font-weight: 600;
+}
+
+.Nav > *{
+    display: inline;
+}
+
+
+.Nav .Navlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 25vw;
+    float: right;   
+}
+
+.Nav .Navlinks > *{
+    text-decoration: none;
+    color: #453F78;
+    transition: .3s;
+}
+
+.Nav .Navlinks >*:hover{
+    color: black;
+    font-weight: 600;
+}
+
