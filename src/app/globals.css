@@ -1,6 +1,6 @@
 
 body{
-    background-color: #FFE6E6;
+    background-color: #FCE9F1;
     margin: 5vh 20vw;
 }
 h1{
@@ -14,3 +14,7 @@ h1{
     
      */
 }
+
+::selection {
+    background: #E1AFD1;
+  }

@@ -1,13 +1,12 @@
-.Home{
-    margin: 5vh 0vw;
-}
+
 .Home .Content{
     margin: 4vh 1vw ;
     display: flex;
     gap: 3.5vw;
-    background-color: #FFCAD4;
+    background-color: #F1D4E5;
     padding: 3em 3em 0em;
     border-radius: 2em;
+    box-shadow:  3px 5px 4px #BB8493, -2px -3px 2px #DBAFA0; 
 }
 
 .Home .Image{

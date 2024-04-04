@@ -6,11 +6,13 @@ import "./Home.css"
 import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 
+import Heading from "./Heading"
+
 export default function Page() {
+    
     return(
       <div className='Home'>
-        <h1 className={montserrat.className}>My Id is . . . ?</h1>
-
+        <Heading/>
         <div className='Content'>
         
           <div>
