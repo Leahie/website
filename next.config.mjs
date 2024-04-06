@@ -1,15 +1,21 @@
-//https://nextjs.org/docs/pages/building-your-application/configuring/mdx
-import nextMdx from '@next/mdx'
+import nextMDX from '@next/mdx'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
+import createMDX from '@next/mdx'
 
-const withMdx = nextMdx({
-  // By default only the `.mdx` extension is supported.
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Configure `pageExtensions`` to include MDX files
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  // Optionally, add any other Next.js config below
+}
+
+const withMDX = createMDX({
   extension: /\.mdx?$/,
-  options: {/* otherOptions… */}
+  options: {
+    remarkPlugins: [remarkFrontmatter, remarkGfm],
+    rehypePlugins: []
+  }
 })
-
-const nextConfig = withMdx({
-  // Support MDX files as pages:
-  pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
-})
-
-export default nextConfig;
+ 
+export default withMDX(nextConfig)
