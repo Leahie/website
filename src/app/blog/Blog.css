@@ -1,0 +1,8 @@
+.Blog .Boxes{
+    display: flex;
+}
+
+
+.Blog .Boxes >*{
+    text-decoration: none;
+}

@@ -21,12 +21,12 @@ h1{
 
 .mdx-h1 {
     font-size: 52px;
-    color: #0d1d30;
+    color: #1B1A55;
 }
 
 .mdx-h2 {
     font-size: 36px;
-    color: #0d1d30;
+    color: #1B1A55;
 }
 
 .mdx-p {
@@ -45,4 +45,13 @@ h1{
     object-fit: cover;
     object-position: center;
     }
+}
+
+h1,h2, h3,h4,p{
+    color: #1B1A55;
+}
+
+h1,h2, h3,h4{
+    text-decoration: none;
+    
 }
