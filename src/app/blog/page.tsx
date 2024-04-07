@@ -1,5 +1,5 @@
 import { Montserrat } from "next/font/google";
-import Heading from "./Heading"
+import Heading from "@/(components)/Heading"
 import Box from "./Box"
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 import remarkFrontmatter from 'remark-frontmatter'
@@ -21,7 +21,7 @@ export default async function Page() {
   let posts:post[] = await getAllPostsMeta()
     return(
       <div className='Blog'>
-        <Heading/>
+        <Heading name="This little life"/>
         <div className="Boxes">
           {posts.map(e => (
           <Link href = {e.link} key={e.title}> 
