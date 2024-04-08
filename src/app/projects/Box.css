@@ -1,12 +1,13 @@
 
-.Box{
+.Box2{
     margin: 2vh .5vw ;
     gap: 3.5vw;
     background-color: #FFF7FC;
     padding: 1em 2em;
     border-radius: 2em;
     box-shadow:  3px 5px 4px #BB8493, -2px -3px 2px #DBAFA0; 
-    width: 50vw;
+    width: 15vw;
+    height: 33vh;
 }
 
 

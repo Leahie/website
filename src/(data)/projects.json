@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Novalang",
+      "link": "https://novalang.onrender.com/",
+      "snippet": "A next-gen platform that simulates social situations through the usage of a large language model (LLM) trained on famous texts, designed to help kids improve writing and communication skills by using works of famous authors. ",
+      "tags": ["#huggingface", "#mongodb", "#nodejs"],
+      "image":"@/(assets)/Novalang.png"
+    },
+    {
+        "name": "Colors",
+        "link": "https://tj-atc.github.io/ATC/switch-button-drawing-game/index.html",
+        "snippet": "A switch drawing game that helps those with mobile disabilities draw using ",
+        "tags": ["#html", "#assistivetech", "#switchdrawing"],
+        "image":"@/(assets)/Colors.png"
+    },
+    {
+        "name": "TJ ATC",
+        "link": "",
+        "snippet": "A webpage that acts as a database for games to practice NuVoice, a vocabulary builder tool that allows you to create, modify, and save vocabularies. Currently in development!",
+        "tags": ["#astro", "#"], 
+        "image":"@/(assets)/Novalang.png"
+    }
+  ]

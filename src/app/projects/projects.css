@@ -1,0 +1,12 @@
+.Projects .Boxes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75vw;
+
+}
+
+
+.Projects .Boxes >*{
+    text-decoration: none;
+    align-self: stretch;
+}

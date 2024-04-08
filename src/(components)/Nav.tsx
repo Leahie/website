@@ -13,8 +13,8 @@ export default function Nav(){
             <div className='Navlinks'>
                 <Link href="/home">Home</Link>
                 <Link href="/blog">Blog</Link>
-                <Link href="/art_us">Art & Us</Link>
-                <Link href="/contact">Contact</Link>
+                <Link href="/hobbyist">Hobbyist</Link>
+                <Link href="/projects">Projects</Link>
                 
             </div>
             
