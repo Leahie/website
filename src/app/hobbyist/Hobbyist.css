@@ -1,0 +1,30 @@
+.Bg{
+    display: flex;
+    justify-content: center;
+}
+.Hobbyist{
+    gap: 2em;
+    display: flex;  
+    background-color:#FFF7FC;
+    width: fit-content;
+    padding: .5em 2vw;
+    border-radius: 2em;
+    
+}
+
+.Hobbyist > *{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: .4em .5em;
+    border-radius: 2em;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    background-color: #edc6dd;
+}
+
+.Hobbyist > *:hover{
+    -webkit-transition: all ease-in-out 200ms;
+    background-color: #F1D4E5;
+}
