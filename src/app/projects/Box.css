@@ -14,6 +14,10 @@
    font-weight: 600;
 }
 
+.Box2:hover{
+    -webkit-transition: all ease-in-out 200ms;
+    background-color: rgb(253, 247, 247);
+}
 
 
 

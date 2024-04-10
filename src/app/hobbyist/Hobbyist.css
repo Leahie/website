@@ -1,7 +1,17 @@
-.Bg{
+.hobb-nav{
     display: flex;
     justify-content: center;
 }
+
+.hobb-body{
+    width: 60vw;
+    background-color: #e8b9d4;
+    height: 60vh;
+    margin: 1em 0em;
+    padding: .2em 1em;
+    border-radius: 1em;
+}
+
 .Hobbyist{
     gap: 1em;
     display: flex;  
@@ -20,10 +30,10 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-    background-color: #edc6dd;
+    background-color: #f5cee5;
 }
 
 .Hobbyist > *:hover{
     -webkit-transition: all ease-in-out 200ms;
-    background-color: #F1D4E5;
+    background-color: #e8b9d4;
 }
