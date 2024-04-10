@@ -2,6 +2,7 @@
 body{
     background-color: #FCE9F1;
     margin: 5vh 20vw;
+    
 }
 h1{
     font-size: 3em;
@@ -14,6 +15,7 @@ h1{
     
      */
 }
+
 
 ::selection {
     background: #E1AFD1;

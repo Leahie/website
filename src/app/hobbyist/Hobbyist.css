@@ -3,9 +3,8 @@
     justify-content: center;
 }
 .Hobbyist{
-    gap: 2em;
+    gap: 1em;
     display: flex;  
-    background-color:#FFF7FC;
     width: fit-content;
     padding: .5em 2vw;
     border-radius: 2em;

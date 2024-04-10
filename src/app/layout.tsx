@@ -18,7 +18,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     <html lang="en">
       <body className="app">
         <Nav />
+        <div className="contain">
         {children}
+        </div>
+        
         </body>
     </html>
   );
