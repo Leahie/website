@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Leah from './Leah'
 import './Nav.css'
 import { Montserrat } from "next/font/google";
-import { underline } from 'colors';
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 
 interface BoxProps{
