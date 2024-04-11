@@ -21,23 +21,25 @@ export default function Page() {
   console.log(tab)
   return(
     <div className="Hobby">
+      
       <Heading name="Semi-Professional"/>
+      <div className="hobb-nav">
+        <div className={['Hobbyist', montserrat.className].join(' ')}>
+          <button onClick={() => change((tab-1)%4)}>&#8592;</button>
+          <button onClick={() => change(0)} style={tab===0 ? {boxShadow: "0px 3px 4px #d9a0b0"} : {}}>Activism</button>
+          <button onClick={() => change(1)}  style={tab===1 ? {boxShadow: "0px 3px 4px #d9a0b0"} : {}}>Social Impact</button>
+          <button onClick={() => change(2)} style={tab===2 ? {boxShadow: "0px 3px 4px #d9a0b0"} : {}}>Computer Science</button>
+          <button onClick={() => change(3)} style={tab===3 ? {boxShadow: "0px 3px 4px #d9a0b0"} : {}}>Art</button>
+          <button onClick={() => change((tab+1)%4)}> &#8594; </button>
+        </div>
+      </div>
       <div className="hobb-body">
         {tab===0 && <Activism/>}
         {tab===1 && <SocialImpact/>}
         {tab===2 && <CS/>}
         {tab===3 && <Art/>}
       </div>
-      <div className="hobb-nav">
-        <div className={['Hobbyist', montserrat.className].join(' ')}>
-          <button onClick={() => change((tab-1)%4)}>&#8592;</button>
-          <button onClick={() => change(0)} style={tab===0 ? {backgroundColor: "#e8b9d4"} : {}}>Activism</button>
-          <button onClick={() => change(1)}  style={tab===1 ? {backgroundColor: "#e8b9d4"} : {}}>Social Impact</button>
-          <button onClick={() => change(2)} style={tab===2 ? {backgroundColor: "#e8b9d4"} : {}}>Computer Science</button>
-          <button onClick={() => change(3)} style={tab===3 ? {backgroundColor: "#e8b9d4"} : {}}>Art</button>
-          <button onClick={() => change((tab+1)%4)} style={tab===4 ? {backgroundColor: "#e8b9d4"} : {}}> &#8594; </button>
-        </div>
-      </div>
+      
     </div>
     
     

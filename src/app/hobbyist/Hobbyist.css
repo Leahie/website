@@ -1,25 +1,30 @@
 .hobb-nav{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hobb-body{
     width: 60vw;
-    background-color: #e8b9d4;
-    height: 60vh;
+    background-color: #FFF7FC;
+    height: fit-content;
     margin: 1em 0em;
-    padding: .2em 1em;
+    padding: .2em 2em;
     border-radius: 1em;
+    
+}
+
+.hobb-body > p li{
+    font-size: 2em;
 }
 
 .Hobbyist{
     gap: 1em;
     display: flex;  
     width: fit-content;
-    padding: .5em 2vw;
     border-radius: 2em;
-    
-}
+    display: flex;
+    height: fit-content;
+}   
 
 .Hobbyist > *{
     background: none;
@@ -27,13 +32,15 @@
 	border: none;
 	padding: .4em .5em;
     border-radius: 2em;
-	font: inherit;
+    font: inherit;
+	font-size: 1.2em;
+    font-weight: 500;
 	cursor: pointer;
 	outline: inherit;
     background-color: #f5cee5;
+    color: #1B1A55;
 }
 
 .Hobbyist > *:hover{
     -webkit-transition: all ease-in-out 200ms;
-    background-color: #e8b9d4;
 }

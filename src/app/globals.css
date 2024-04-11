@@ -1,4 +1,9 @@
 
+*{
+    text-underline-offset: 3px;
+    
+}
+
 body{
     background-color: #FCE9F1;
     margin: 5vh 20vw;

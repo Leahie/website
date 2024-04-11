@@ -11,6 +11,7 @@
 .Nav .Navlinks{
     display: flex;
     justify-content: space-around;
+    gap: 1vw;
     width: 25vw;
     float: right;   
 }
