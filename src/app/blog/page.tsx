@@ -17,6 +17,13 @@ interface post{
   slug: string;
 }
 
+interface front{
+  link: string,
+  title: string, 
+  date: string, 
+  snippet: string,
+}
+
 export default async function Page() {
   let posts:post[] = await getAllPostsMeta()
     return(
@@ -38,7 +45,7 @@ export default async function Page() {
 const getAllPostsMeta = async() =>{
   const files = fs.readdirSync('src/(content)')
 
-  let posts = []
+  let posts:post[] = []
 
   for(const file of files){
     const {meta} = await getPost(file)
@@ -52,13 +59,12 @@ async function getPost(slug: string){
   const filePath = "src/(content)/"+slug 
   const file = fs.readFileSync(`src/(content)/${realSlug}.mdx`)
 
-  const { content, frontmatter }:{content: object, frontmatter: Record<string, any>} = await compileMDX({
+  const { content, frontmatter }:{content: object, frontmatter:front} = await compileMDX({
       source:file,
       options: {parseFrontmatter: true, mdxOptions: {
           remarkPlugins: [[remarkFrontmatter]]
         } },
     })
-
     return{meta: {...frontmatter, slug:realSlug}, content}
 }
 
