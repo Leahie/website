@@ -11,3 +11,7 @@
 
 
 
+.Box:hover{
+    -webkit-transition: all ease-in-out 200ms;
+    box-shadow: 0px 0px 10px rgba(55, 23, 16, 0.25);
+}

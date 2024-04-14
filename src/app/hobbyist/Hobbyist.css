@@ -22,7 +22,6 @@
     display: flex;  
     width: fit-content;
     border-radius: 2em;
-    display: flex;
     height: fit-content;
 }   
 
@@ -43,4 +42,15 @@
 
 .Hobbyist > *:hover{
     -webkit-transition: all ease-in-out 200ms;
+}
+
+@media (max-width: 700px) {
+    .Small{
+        display:none;
+    }
+    .Hobbyist{
+        display: flex;  
+        margin: 0 auto;
+        justify-content: center;
+    }
 }

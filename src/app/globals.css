@@ -6,9 +6,18 @@
 
 body{
     background-color: #FCE9F1;
-    margin: 5vh 20vw;
+    margin: 15vh 20vw;
     
 }
+
+@media (max-width: 800px) {
+    body{
+        background-color: #FCE9F1;
+        margin: 15vh 10vw;    
+    }
+    
+}
+
 h1{
     font-size: 3em;
     color: #1B1A55;
@@ -20,6 +29,11 @@ h1{
     
      */
 }
+@media (max-width: 600px) {
+    h1{
+        font-size: 10vw;
+}
+    }
 
 
 ::selection {

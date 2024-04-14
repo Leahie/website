@@ -2,15 +2,35 @@
 .Home .Content{
     margin:  1vw ;
     display: flex;
+    flex-wrap: wrap;
     gap: 3.5vw;
     background-color: #F1D4E5;
-    padding: 3em 3em 0em;
+    padding: 3em 5em 0em 3em;
     border-radius: 2em;
+    min-width: 290px;
     /* box-shadow:  3px 5px 4px #BB8493, -2px -3px 2px #DBAFA0;  */
 }
+
+.Home .Content >*{
+    margin: 0 auto;
+}
+
 
 .Home .Image{
     /* background-image: linear-gradient(#B5C0D0, #49243E);  */
     padding: .2em;
     box-shadow:  5px 7px 6px #BB8493, -4px -5px 4px #DBAFA0; 
 }
+
+.Home .ImgGroup{
+    justify-content: center;
+}
+
+@media (max-width: 650px) {
+    .Home .Content{
+        background-color: transparent;
+        justify-content: center;
+        padding:0em;
+        padding-top: 1em;
+    }
+  }

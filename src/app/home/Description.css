@@ -1,5 +1,6 @@
 .Description{
     font-size: 1.1em;
+    flex: 999 1 300px;
 }
 .Description a{
     text-decoration: none;

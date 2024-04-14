@@ -1,7 +1,11 @@
+"use client";
 import Link from 'next/link'
 import Leah from './Leah'
+import Hamburger from './Hamburger';
 import './Nav.css'
 import { Montserrat } from "next/font/google";
+import React, {useState, useEffect, useRef} from 'react';
+
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 
 interface BoxProps{
@@ -9,12 +13,26 @@ interface BoxProps{
 }
 
 export default function Nav(props: BoxProps){
+
+    const [LinksClass, setLinksClass] = useState("")
+
+    const toggleit = () =>{
+        if (LinksClass === ""){
+            setLinksClass("On")
+        } 
+        else{
+            setLinksClass("")
+        }
+    }
     return(
         <div className={[montserrat.className, 'Nav'].join(' ')}>
             <div className='Logo'>
-                <Leah/>
+                <a href="/"><Leah/></a>
+                <span onClick={toggleit} className="navbar-toggle" id="js-navbar-toggle">
+                   <Hamburger /> 
+                </span>
             </div>
-            <div className='Navlinks'>
+            <div className={['Navlinks', LinksClass].join(' ')}>
                 <Link href="/home" style={props.place===0 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Home</Link>
                 <Link href="/blog" style={props.place===1 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Blog</Link>
                 <Link href="/hobbyist" style={props.place===2 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Hobbyist</Link>

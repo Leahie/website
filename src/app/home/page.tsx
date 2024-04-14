@@ -15,9 +15,9 @@ export default function Page() {
         <Heading/>
         <div className='Content'>
         
-          <div>
+          <div className="ImgGroup">
               <div className="Image">
-              <Image src={headShot} alt="Picture of Leah Zhang" width={290} height={370}/>
+                <Image src={headShot} alt="Picture of Leah Zhang" width={290} height={370}/>
               </div>
               <Socials/>
           </div>
