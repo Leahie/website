@@ -16,9 +16,11 @@
 }
 
 
-.Home .Image{
+.Home .Face{
     /* background-image: linear-gradient(#B5C0D0, #49243E);  */
-    padding: .2em;
+    box-shadow:  5px 7px 6px #BB8493, -4px -5px 4px #DBAFA0; 
+    width: 18.85em;
+    height: 24.05em;
     box-shadow:  5px 7px 6px #BB8493, -4px -5px 4px #DBAFA0; 
 }
 
@@ -32,5 +34,13 @@
         justify-content: center;
         padding:0em;
         padding-top: 1em;
+    }
+    .Home .Face{
+        /* background-image: linear-gradient(#B5C0D0, #49243E);  */
+        padding: .2em;
+        box-shadow:  5px 7px 6px #BB8493, -4px -5px 4px #DBAFA0; 
+        width: 14.5em;
+        height: 18.5em;
+        box-shadow:  5px 7px 6px #BB8493, -4px -5px 4px #DBAFA0; 
     }
   }

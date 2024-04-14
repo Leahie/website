@@ -15,7 +15,7 @@
 
 .Socials .Buttons{
     display: flex;
-    margin: 1.5em 0em 0em ;
+    margin: 1.5em 0em 1em ;
     justify-content: space-around;
     
 }
@@ -29,6 +29,9 @@
     width: fit-content;
     font-size: large;
     font-weight: 600;
-    
-
+}
+@media (max-width: 650px) {
+    .SocialLinks{
+        margin: 0em;
+    }
 }

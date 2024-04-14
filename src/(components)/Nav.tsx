@@ -33,10 +33,10 @@ export default function Nav(props: BoxProps){
                 </span>
             </div>
             <div className={['Navlinks', LinksClass].join(' ')}>
-                <Link href="/home" style={props.place===0 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Home</Link>
-                <Link href="/blog" style={props.place===1 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Blog</Link>
-                <Link href="/hobbyist" style={props.place===2 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Hobbyist</Link>
-                <Link href="/projects" style={props.place===3 ? {textDecoration:"underline", borderBottom: "2px solid #453F78"} : {}}>Projects</Link>
+                <Link href="/home" style={props.place===0 ? { borderBottom: "5px solid #453F78"} : {}}>Home</Link>
+                <Link href="/blog" style={props.place===1 ? {borderBottom: "5px solid #453F78"} : {}}>Blog</Link>
+                <Link href="/hobbyist" style={props.place===2 ? { borderBottom: "5px solid #453F78"} : {}}>Hobbyist</Link>
+                <Link href="/projects" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Projects</Link>
                 
             </div>
             

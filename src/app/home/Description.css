@@ -1,6 +1,7 @@
 .Description{
     font-size: 1.1em;
     flex: 999 1 300px;
+
 }
 .Description a{
     text-decoration: none;
@@ -12,3 +13,9 @@
     color: #1B1A55;
     font-weight: bold;
 }
+@media (max-width: 650px) {
+    .Description{
+        padding-right: 1em;
+    }
+
+  }
