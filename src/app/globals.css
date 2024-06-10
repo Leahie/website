@@ -1,78 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *{
-    text-underline-offset: 3px;
-    
+  margin:0
 }
 
-body{
-    background-color: #FCE9F1;
-    margin: 15vh 20vw;
-    
-}
-
-@media (max-width: 800px) {
-    body{
-        background-color: #FCE9F1;
-        margin: 15vh 10vw;    
-    }
-    
-}
-
-h1{
-    font-size: 3em;
-    color: #1B1A55;
-    letter-spacing: .05em;
-    max-width: fit-content;
-    margin: .3em 0em;
-
-    /* 
-    
-     */
-}
-@media (max-width: 600px) {
-    h1{
-        font-size: 10vw;
-}
-    }
-
-
-::selection {
-    background: #E1AFD1;
+:root {
+    /* Define custom properties */
+    --white: #F3F7EC;
+    --pale: #DAD3BE;
+    --light: #E88D67;
+    --med: #006989;
+    --dark: #005C78;
+    --black: #222831;
+    --large: 10em;
+  
   }
 
-.mdx-h1 {
-    font-size: 52px;
-    color: #1B1A55;
+body{
+    background-color: var(--white);
 }
 
-.mdx-h2 {
-    font-size: 36px;
-    color: #1B1A55;
-}
-
-.mdx-p {
-    font-size: 20px;
-    margin-bottom: 1.5em;
-    line-height: 1.6em;
-}
-
-.mdx-hero-image {
-    position: relative;
-    width: 100%;
-    height: 600px;
-
-    img {
-    border-radius: 10px;
-    object-fit: cover;
-    object-position: center;
-    }
-}
-
-h1,h2, h3,h4,p{
-    color: #1B1A55;
-}
-
-h1,h2, h3,h4{
-    text-decoration: none;
-    
+.Title{
+    color: var(--dark);
+    font-size: var(--large);
+    font-weight: 600;
+    width: 50vw;
 }
