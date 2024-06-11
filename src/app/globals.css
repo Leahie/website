@@ -15,12 +15,21 @@
     --dark: #005C78;
     --black: #222831;
     --large: 10em;
-  
+    --text-size: 2em;
   }
 
-body{
-    background-color: var(--white);
-}
+  body{
+    margin: 0;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      background-color: var(--white);
+  }
+  
+  main {
+    display: block;
+    flex: 1 0 auto;
+  }
 
 .Title{
     color: var(--dark);

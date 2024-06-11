@@ -5,6 +5,7 @@ import "./globals.css";
 import Link from 'next/link'
 import "./app.css";
 import Nav from '../(components)/Nav'
+import Footer from "@/(components)/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '700']});
@@ -18,10 +19,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     <html lang="en">
       <body className="app">
         
-        <div className="contain">
+        <main>
         {children}
-        </div>
-        
+        </main>
+        <Footer/>        
         </body>
     </html>
   );

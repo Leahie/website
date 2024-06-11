@@ -10,11 +10,7 @@ const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','
 export default function Socials() {
     return(
         <div className='Socials'>
-            <div className={["Buttons", montserrat.className].join(' ')}>
-                <a href="https://drive.google.com/file/d/1hlPCS0VaX3Vdo62RuRN2qSEjRurOqkYd/view?usp=sharing">Resume</a>
-                 <a href="https://tj-atc.github.io/ATC/">ATC Website</a> 
-            </div>
-                        <div className='SocialLinks' >
+            <div className='SocialLinks' >
                 <a href={Data[3].link}><MdEmail/></a>
                 <a href={Data[0].link}><FaGithub/></a>
                 <a href={Data[4].link}><FaPaintBrush/></a>  

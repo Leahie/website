@@ -16,7 +16,8 @@ module.exports = {
         "pale-color": "var(--pale)",
         "light-color": "var(--light)",
         "med-color": "var(--med)",
-        "black-color": "var(--black)"
+        "black-color": "var(--black)",
+        "normal-text" : "var(--text-size)" 
       },
     },
   },

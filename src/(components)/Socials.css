@@ -7,10 +7,10 @@
     justify-content: space-around;
 }
 .SocialLinks a{
-    color: #252468;
+    color: var(--med);
 }
 .SocialLinks a:hover{
-    color: #4a5385;
+    color: var(--dark);
 }
 
 .Socials .Buttons{

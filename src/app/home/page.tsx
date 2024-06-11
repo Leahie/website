@@ -1,4 +1,4 @@
-import Socials from "./Socials";
+import Socials from "@/(components)/Socials";
 import Description from "./Description";
 import Image from 'next/image'
 import headShot from '@/(assets)/52.png'
