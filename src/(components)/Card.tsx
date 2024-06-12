@@ -38,7 +38,7 @@ export default function Card(props: CardProps){
               scale: 1.1
             }}
             whileTap={{ scale: 0.9 }}
-            href={props.link} onMouseOver={() => setBool(true)} onMouseOut={() => setBool(false)} className="transition shadow-md duration-500 ease-in-out  flex items-center justify-center rounded-[35%] size-[15vw] bg-light-color opacity-70 text-opacity-100 border-light-color border-[1px] hover:border-med-color hover:shadow-xl">
+            href={props.link} onMouseOver={() => setBool(true)} onMouseOut={() => setBool(false)} className="transition shadow-md duration-500 ease-in-out  flex items-center justify-center rounded-[35%] size-[15vw] bg-med-color opacity-70 hover:opacity-95 text-opacity-100 border-light-color border-[1px] hover:border-med-color hover:shadow-xl">
             {bool ? <TypeAnimation className="text-white  text-lg text-center p-5 transition-transform" speed={50} sequence={[props.desc]}/>
             :
             <span className="font-semibold text-white-color text-lg text-opacity-100 text-center p-5 transition-transform">{props.name}</span>}
