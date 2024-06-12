@@ -9,6 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+      gwendolyn: ["Gwendolyn", "cursive"],
+      greatvibes: ["Great Vibes", "cursive"]
+
+    },
     extend: {
       colors: {
         "dark-color": "var(--dark)",
@@ -19,7 +25,10 @@ module.exports = {
         "black-color": "var(--black)",
         "normal-text" : "var(--text-size)" 
       },
+      
+      
     },
+    
   },
   plugins: [],
 }

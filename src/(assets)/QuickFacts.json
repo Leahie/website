@@ -1,32 +1,38 @@
 [
+    
     {
-        "name": "Lover of Webtoons",
-        "symbol": "hearts", 
-        "img": "/Home_00.jpg", 
-        "desc": "Started in fourth grade and never quit, it's like cocaine at this point"
-    },
-    {
-        "name": "Resident Supernerd",
-        "symbol": "clubs", 
-        "img": "/Home_00.jpg", 
+        "label":"J",
+        "name": "Supernerd",
+        "symbol": "♣", 
+        "img": "/Jack.png", 
         "desc": "Thought I would keep playing roblox until adulthood, now I can code roblox"
     },
     {
+        "label":"Q",
+        "name": "Lover",
+        "symbol": "♥", 
+        "img": "/Queen.png", 
+        "desc": "Started in fourth grade and never quit, it's like cocaine at this point"
+    },
+    {
+        "label":"Jocker",
         "name": "Leah Zhang",
-        "symbol": "dollars", 
-        "img": "/Home_00.jpg", 
+        "symbol": "§", 
+        "img": "/Jocker.png", 
         "desc": "It's just me; explore the website to find out more!"
     },
     {
-        "name": "Food Tester",
-        "symbol": "diamonds", 
-        "img": "/Home_00.jpg", 
+        "label":"K",
+        "name": "Foodie",
+        "symbol": "♦", 
+        "img": "/King.png", 
         "desc": "Makes me go broke, but my stomach is fed"
     },
     {
+        "label":"A",
         "name": "Artisete",
-        "symbol": "spades", 
-        "img": "/Home_00.jpg", 
-        "desc": "First and almost-only love"
+        "symbol": "♠", 
+        "img": "/Ace.png", 
+        "desc": "This one's my first and almost-only love"
     }
 ]

@@ -54,8 +54,22 @@ export default function Home() {
     <IoIosArrowDropdownCircle className=' text-light-color size-[4.5em]'/>
     </motion.div>
     
-    <motion.div className='flex flex-wrap justify-center pt-[15%] pb-[15%] gap-10 w-full bg-gradient-to-b from-[#F3F7EC]/5 to-[#006989]'
-    initial={{ opacity: 0,  y:50}}
+    
+    
+    <QuickFacts/>
+    <div className='bg-white-color pt-[4%] pb-[2%] '>
+      <motion.div layout whileInView={{rotate: [0, 360]}} transition={{ duration: 1 }} whileHover={{
+        scale: 1.2,
+        rotate:0,
+        transition: { duration: 1 },
+      }}
+      onMouseOver={() => setBool(true)} onMouseOut={() => setBool(false)} className=' flex p-4 rounded-full w-fit mx-auto justify-center relative gap-3 bg-light-color text-white-color'>
+      <FaRegHandPointer className='size-8'/> {bool ?  <p className='font-semibold'>Learn More!</p> : <></> }
+      </motion.div>
+    </div>
+
+    <motion.div className='flex flex-wrap justify-center pt-[10%] pb-[15%] gap-10 w-full '
+    initial={{ opacity: 0,  y:100}}
     whileInView={{ opacity: 1,   y: 0}}
     transition={{ duration: 0.5 }}
     >
@@ -64,18 +78,7 @@ export default function Home() {
         <Card link="/hobbyist" name="Portfolio" desc="Artwork on Display!"/>
         <Card link="/projects" name="Projects" desc="Things I'm working on!"/>
     </motion.div>    
-    <div className='bg-med-color pt-[4%] pb-[2%] '>
-      <motion.div layout whileInView={{rotate: [0, 360]}} transition={{ duration: 1 }} whileHover={{
-        scale: 1.2,
-        rotate:0,
-        transition: { duration: 1 },
-      }}
-      onMouseOver={() => setBool(true)} onMouseOut={() => setBool(false)} className=' flex p-4 rounded-full w-fit mx-auto justify-center relative gap-3 bg-light-color text-med-color'>
-      <FaRegHandPointer className='size-8'/> {bool ?  <p className='font-semibold'>Quick Facts!</p> : <></> }
-      </motion.div>
-    </div>
     
-    <QuickFacts/>
       
   </div>
   );
