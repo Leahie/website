@@ -73,7 +73,7 @@ export default function Home() {
     whileInView={{ opacity: 1,   y: 0}}
     transition={{ duration: 0.5 }}
     >
-        <Card link="/home" name="About" desc="Learn a little about me!"/>
+        <Card link="/about" name="About" desc="Learn a little about me!"/>
         <Card link="/blog" name="Notes" desc="Blogging bout life!"/>
         <Card link="/hobbyist" name="Portfolio" desc="Artwork on Display!"/>
         <Card link="/projects" name="Projects" desc="Things I'm working on!"/>

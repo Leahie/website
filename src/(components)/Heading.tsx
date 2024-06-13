@@ -12,6 +12,6 @@ interface HeadingProps{
 
 export default function Heading(props: HeadingProps){
     return(
-            <h1 className={[montserrat.className, "Title"].join(" ")}>{props.name}</h1>
+            <h1 className={[montserrat.className, "Title", "self-start pt-5"].join(" ")}>{props.name}</h1>
     )
 }

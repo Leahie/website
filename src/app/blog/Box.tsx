@@ -9,7 +9,7 @@ interface BoxProps{
 }
 export default function Box(props: BoxProps){
     return(
-        <div className={["Box", montserrat.className].join(' ')}>
+        <div className="bg-[#006989]/25 flex w-[75%]">
             <h2>{props.title}</h2>
             <h3>{props.date}</h3>
             <p>{props.snippet}</p>

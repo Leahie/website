@@ -41,3 +41,14 @@
 .PockerCard{
   background-image: repeating-linear-gradient(36deg, rgba(255,255,255, 0.4), rgba(255,255,255, 0.4) 1px, transparent 5px, transparent 5px);
 }
+
+a{
+  text-decoration: none;
+  color: #453F78;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: none;
+  color: #1B1A55;
+  font-weight: bold;
+}

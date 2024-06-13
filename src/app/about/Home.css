@@ -1,16 +1,4 @@
 
-.Home .Content{
-    margin:  1vw ;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3.5vw;
-    background-color: #F1D4E5;
-    padding: 3em 5em 0em 3em;
-    border-radius: 2em;
-    min-width: 290px;
-    /* box-shadow:  3px 5px 4px #BB8493, -2px -3px 2px #DBAFA0;  */
-}
-
 .Home .Content >*{
     margin: 0 auto;
 }

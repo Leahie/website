@@ -31,7 +31,8 @@ export default function Card(props: CardProps){
         <motion.div
         initial={{opacity:0, scale:.75}}
         whileInView={{opacity:1, scale:1}}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 1 }} 
+        
         >
             <motion.a variants={cardVariants} //bg-gradient-to-b from-[#F3F7EC]/75 to-[#E88D67]/25 
             whileHover={{
