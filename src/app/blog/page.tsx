@@ -29,16 +29,15 @@ interface front{
 
 export default async function Page() {
   let posts:post[] = await getAllPostsMeta()
+  posts = posts.reverse()
     return(
       <div className='Blog'>
-        <div className='mt-[5%] mx-[5%] flex  h-fit mb-[7%]'>
+        <div className='mt-[5%] mx-[5%] flex h-fit mb-[2%]'>
           <div className="w-[50%]">
           <Heading name="Notes"/>
-
-
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-32">
           {posts.map(e => (
           <Link href = {e.link} key={e.title}> 
             <Box title={e.title} date={ e.date} snippet={e.snippet}/>
