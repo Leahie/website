@@ -4,7 +4,8 @@ import React, {useState, useEffect, useRef} from 'react';
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 import Heading from "@/(components)/Heading" 
 // Import tabs
-
+import OlderWorks from "@/(assets)/Portfolio/Older_Works.json"
+import Artwork from "./Artwork";
 
 
 export default function Page() {
@@ -22,7 +23,18 @@ export default function Page() {
 
   return(
     <div className="Hobby">
-      <p>wassup</p>
+      <div className='mt-[5%] mx-[5%] flex h-fit mb-[2%]'>
+        <div className="w-[50%]">
+          <Heading name="Portfolio"/>
+        </div>
+      </div>
+      <div>
+        {
+          OlderWorks.map(({name, img}, index)=>(
+            <Artwork name={name} img={img} key={index}/>
+          )) 
+        }
+      </div>
     </div>    
   );
   }
