@@ -72,12 +72,11 @@ export function Modal({ isOpen, changeArtwork, onClose, index, imgSrc, imgAlt, t
     scaledHeight = maxDimensions.height;
     scaledWidth = scaledHeight * aspectRatio;
   }
-  useEffect(() => {
-    const handleChangeArtwork = (direction: number) => {
-        changeArtwork(index, direction);
-      };
-  }, [onClose]);
   
+  const handleChangeArtwork = (direction: number) => {
+    changeArtwork(index, direction);
+  };
+
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex  flex-col items-center justify-center z-50 "onClick={onClose}>
