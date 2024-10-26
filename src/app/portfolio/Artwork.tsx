@@ -19,21 +19,13 @@ export default function Artwork(props: ArtProps) {
   const closeModal = () => setArtModalOpen(false);
   const temp_funct = () => setArtModalOpen(false);
 
-  useEffect(() => {
-    const handleKeyDown = (e: any) => {
-      if (e.key === "Escape" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
-        closeModal();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
 
   return (
     <>
       <div 
-        className="w-[90vw] sm:w-[45vw] md:w-[30vw] lg:w-[25vw] h-[50vh] overflow-hidden relative lg:hover:scale-105 ease-in-out duration-300"
+        className="w-[90vw] sm:w-[45vw] md:w-[30vw] lg:w-[25vw] h-[50vh] overflow-hidden relative lg:hover:scale-105 ease-in-out duration-300
+        drop-shadow-lg hover:drop-shadow-2xl"
         onClick={openModal}
       >
         <Image src={props.img} alt={props.name} fill={true} objectFit="cover" className="cursor-pointer" />

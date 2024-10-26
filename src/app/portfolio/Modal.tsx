@@ -39,9 +39,13 @@ export function Modal({ isOpen, changeArtwork, tempfunct, onClose, index, imgSrc
       if (e.key === "Escape") {
         onClose();
       } else if (e.key === "ArrowLeft") {
-        changeArtwork(index, -1);
+        if(isOpen) {
+          tempfunct(); changeArtwork(index, -1);
+        }
       } else if (e.key === "ArrowRight") {
-        changeArtwork(index, 1);
+        if(isOpen) {
+          tempfunct(); changeArtwork(index, 1);
+        }
       }
     };
     window.addEventListener("keydown", handleKeyDown);
