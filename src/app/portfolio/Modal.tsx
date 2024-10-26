@@ -74,12 +74,19 @@ export function Modal({ isOpen, changeArtwork, onClose, index, imgSrc, imgAlt, t
   }
   
   const handleChangeArtwork = (direction: number) => {
+    onClose();
     changeArtwork(index, direction);
   };
 
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex  flex-col items-center justify-center z-50 "onClick={onClose}>
+    <div className="fixed inset-0 bg-black bg-opacity-75 flex   items-center justify-center z-50 "onClick={onClose}>
+      <button
+          onClick={() => handleChangeArtwork(-1)}
+          className="p-2 font-bold text-pale-color flex justify-center px-4 text-[2.5em] hover:text-white"
+        >
+          <IoIosArrowDropleftCircle />
+        </button>
       <div
         className="relative bg-white rounded-md bg-opacity-90 overflow-hidden"
         style={{
@@ -113,21 +120,13 @@ export function Modal({ isOpen, changeArtwork, onClose, index, imgSrc, imgAlt, t
           
         </div>
       </div>
-       {/* Floating Navigation Arrows */}
-       <div className=" flex justify-center px-4 text-[2.5em]">
-        <button
-          onClick={() => handleChangeArtwork(-1)}
-          className="p-2  font-bold text-pale-color hover:text-white"
-        >
-          <IoIosArrowDropleftCircle />
-        </button>
-        <button
+      <button
           onClick={() => handleChangeArtwork(1)}
-          className="p-2 font-bold text-pale-color hover:text-white"
+          className="p-2 font-bold text-pale-color flex justify-center px-4 text-[2.5em] hover:text-white"
         >
           <IoIosArrowDroprightCircle />
         </button>
-      </div>
+
     </div>
   );
 }

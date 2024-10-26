@@ -5,7 +5,7 @@ const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','
 import Heading from "@/(components)/Heading" 
 // Import tabs
 import OlderWorks from "@/(assets)/Portfolio/Older_Works.json"
-import AIUSWorks from "@/(assets)/Portfolio/Ai_Us.json"
+import AIUSWorks from "@/(assets)/Portfolio/AI_Us.json"
 
 import Artwork from "./Artwork";
 import Subtitle from "./Subtitle";
