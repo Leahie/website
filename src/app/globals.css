@@ -33,9 +33,7 @@
 
 .Title{
     color: var(--dark);
-    font-size: var(--large);
     font-weight: 600;
-    width: 50vw;
 }
 
 .PockerCard{
@@ -52,3 +50,4 @@ a:hover{
   color: #1B1A55;
   font-weight: bold;
 }
+

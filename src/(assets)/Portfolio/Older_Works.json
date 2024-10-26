@@ -1,26 +1,32 @@
 [
     {
         "name": "Creation",
-        "img": "/Portfolio/Older-Works/Creation.png"
+        "img": "/Portfolio/Older-Works/Creation.png",
+        "desc": ""
     },
     {
         "name": "Observation One",
-        "img": "/Portfolio/Older-Works/Obser1.jpg"
+        "img": "/Portfolio/Older-Works/Obser1.jpg",
+        "desc": ""
     },
     {
         "name": "The Bus Stop",
-        "img": "/Portfolio/Older-Works/Time-Stop.jpg"
+        "img": "/Portfolio/Older-Works/Time-Stop.jpg",
+        "desc": ""
     },
     {
         "name": "Water",
-        "img": "/Portfolio/Older-Works/Water.png"
+        "img": "/Portfolio/Older-Works/Water.png",
+        "desc": ""
     },
     {
         "name": "Observation Two",
-        "img": "/Portfolio/Older-Works/Obser2.jpg"
+        "img": "/Portfolio/Older-Works/Obser2.jpg",
+        "desc": ""
     },
     {
         "name": "Art Gallery",
-        "img": "/Portfolio/Older-Works/Illustration2.png"
+        "img": "/Portfolio/Older-Works/Illustration2.png",
+        "desc": ""
     }
 ]

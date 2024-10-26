@@ -1,0 +1,27 @@
+[
+    {
+        "name": "A Computer's Core",
+        "img": "/Portfolio/AI&Us/A-Computer-Core.jpg",
+        "desc": "How will we coexist with AI? In some ways, we already are—we use AI to recommend music, TV shows, and even communicate between languages through natural language processors. As AI becomes increasingly integral to our daily lives, I wanted to explore our connection visually. In my piece, a human hand—painted in an unhuman, almost-cadaverous hue—clenches a brain. Wires spring from the brain via an attached circuit board; some of these wires connect to another circuit board attached to the wrist. Though AI isn’t human, it works by utilizing an overwhelming amount of data, “learning” how to act as a human brain would. These wires, then, are the machine equivalent of veins: each part needs the other to survive."
+    },
+    {
+        "name": "A Fully Connected Neural Network",
+        "img": "/Portfolio/AI&Us/A-Fully-Connected Neural-Network.jpg", 
+        "desc": "Machine Learning is based on neural networks—it was designed to mimic the way our brain processes information and determines solutions. But in recent years, machine learning has gone much further than anything our brains can envision; the only remaining aspect are the neurons that fire and the synapses that connect them. In this self-portrait, I’m gazing up at this new, seemingly limitless version of machine learning in wonder and a twinge of fear: where will machine learning take us next?"
+    },
+    {
+        "name": "Flower -no- Girl",
+        "img": "/Portfolio/AI&Us/Flower-No-Girl.jpg", 
+        "desc": "The machine’s response switches back in forth, as if it’s taking its time to think before answering. “Flower”, no, “Girl”, it struggles to identify the subject of the painting. I had the idea of creating a piece about Convolutional Neural Networks (CNN) when I had to create my own model in the Artificial Intelligence Research Club. The CNN is mainly used for classification; a common example is the Mnist dataset, where the CNN is trained to classify handwritten numbers. Over time the model learns to identify the difference between the pointy loop of the “4” and the circular loop of the “9”. I saw how the model learns by understanding smaller components of the whole subject: eyes and ears for humans, leaves and sticks for plants. This is represented in my artwork with the small squares in front. In the end the star of the painting is not the girl and her flower, but the text in the background with the machine’s thinking. "
+    },
+    {
+        "name": "The Blacksmith",
+        "img": "/Portfolio/AI&Us/The-Blacksmith.jpg", 
+        "desc": "How did this world come to be? When I was young, I looked to the Bible; later, after I’d left the church, I turned to the Big Bang and, during my Greek mythology phase, Hephaestus, the blacksmith and inventor. When we think of programmers, we tend to imagine slouched figures in dark hoodies, vigorously typing in front of a computer. This artwork reimagines Hephaestus as these programmers, hammering in the code forming from his fingertips."
+    },
+    {
+        "name": "Ticking Egg Bomb",
+        "img": "/Portfolio/AI&Us/Ticking-Egg-Bomb.png", 
+        "desc": "In just twenty years technology has advanced at unparalleled rates. I drew this piece as a cautionary tale. As technology expands we continue to exhaust our Earth’s resources. Thus each egg is equipped with dynamite representing a technological explosion. The wide impact breaks the eggs shells and harms the other eggs. One cannot explode without affecting its surroundings. Our earth’s existence is a miracle. We’re the thread between its life and death. "
+    }
+]

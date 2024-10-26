@@ -44,9 +44,9 @@ export default function Nav(props: BoxProps){
             </div>
             <div className={['Navlinks', LinksClass].join(' ')}>
                 <Link href="/about" style={props.place===0 ? { borderBottom: "5px solid #453F78"} : {}}>About</Link>
-                <Link href="/blog" style={props.place===1 ? {borderBottom: "5px solid #453F78"} : {}}>Notes</Link>
+                {/* <Link href="/blog" style={props.place===1 ? {borderBottom: "5px solid #453F78"} : {}}>Notes</Link> */}
                 <Link href="/portfolio" style={props.place===2 ? { borderBottom: "5px solid #453F78"} : {}}>Portfolio</Link>
-                <Link href="/projects" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Projects</Link>
+                {/* <Link href="/projects" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Projects</Link> */}
             </div>
         </div>
     )
