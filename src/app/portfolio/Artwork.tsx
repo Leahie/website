@@ -1,59 +1,62 @@
 "use client"
 import Image from "next/image";
-import {Modal} from "./Modal"
+import { Modal } from "./Modal";
 import { useState, useEffect } from "react";
-interface ArtProps{
-    name: string, 
-    changeArtwork: (arg0: number, arg1: number) => void;
-    img:string, 
-    desc: string,
-    classname: string,
-    index: number
+import { motion } from "framer-motion";
+
+interface ArtProps {
+  name: string;
+  changeArtwork: (arg0: number, arg1: number) => void;
+  img: string;
+  desc: string;
+  classname: string;
+  index: number;
 }
 
+export default function Artwork(props: ArtProps) {
+  const [modalOpen, setArtModalOpen] = useState(false);
+  const openModal = () => setArtModalOpen(true);
+  const closeModal = () => setArtModalOpen(false);
+  const temp_funct = () => setArtModalOpen(false);
 
-export default function Artwork(props: ArtProps){
-    const [modalOpen, setArtModalOpen] = useState(false)
-    const openModal = () => setArtModalOpen(true);
-    const closeModal = () => setArtModalOpen(false);
+  useEffect(() => {
+    const handleKeyDown = (e: any) => {
+      if (e.key === "Escape" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
+        closeModal();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
-    const handleKeyDown = (e:any) => {
-        console.log(props.index)
-        if (modalOpen==true) {
-            
-            if (e.key === "ArrowLeft") {
-                closeModal();
-            props.changeArtwork(props.index, -1); // Previous artwork
-            } else if (e.key === "ArrowRight") {
-                closeModal();
-            props.changeArtwork(props.index, 1); // Next artwork
-            }
-        }
-      };
-      
-      useEffect(() => {
-        window.addEventListener("keydown", handleKeyDown);
-        return () => {
-          window.removeEventListener("keydown", handleKeyDown);
-        };
-      }, [modalOpen]);
-      
-    return(
-        <>
-        <div className=" w-[90vw] sm:w-[45vw] md:w-[30vw] lg:w-[25vw] h-[50vh] overflow-hidden relative lg:hover:scale-105 ease-in-out duration-300" onClick={openModal}>
-            <Image src={props.img} alt={props.name} fill={true} objectFit="cover" className="cursor-pointer" />
-        </div>
-        <Modal
-            isOpen={modalOpen}
-            index={props.index}
-            onClose = {closeModal}
-            changeArtwork = {props.changeArtwork}
-            imgSrc = {props.img}
-            imgAlt={props.name}
-            text={props.name}
-            desc={props.desc}
+
+  return (
+    <>
+      <div 
+        className="w-[90vw] sm:w-[45vw] md:w-[30vw] lg:w-[25vw] h-[50vh] overflow-hidden relative lg:hover:scale-105 ease-in-out duration-300"
+        onClick={openModal}
+      >
+        <Image src={props.img} alt={props.name} fill={true} objectFit="cover" className="cursor-pointer" />
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0, scale: 0.8 }}
+        transition={{ duration: 0.5 }}
+      >
+                <Modal
+        isOpen={modalOpen}
+        index={props.index}
+        onClose={closeModal}
+        tempfunct = {temp_funct}
+        changeArtwork={props.changeArtwork} // Pass this function to Modal
+        imgSrc={props.img}
+        imgAlt={props.name}
+        text={props.name}
+        desc={props.desc}
         />
-        </>
-        
-    )
+
+      </motion.div>
+    </>
+  );
 }

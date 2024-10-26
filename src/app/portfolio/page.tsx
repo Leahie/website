@@ -6,80 +6,106 @@ import Heading from "@/(components)/Heading"
 // Import tabs
 import OlderWorks from "@/(assets)/Portfolio/Older_Works.json"
 import AIUSWorks from "@/(assets)/Portfolio/AI_Us.json"
+import RecentWorks from "@/(assets)/Portfolio/Recent_Works.json"
 
 import Artwork from "./Artwork";
 import Subtitle from "./Subtitle";
 import {Modal} from "./Modal"
-
-
+import { motion } from "framer-motion"
 export default function Page() {
-  const [modalOpen, setPageModalOpen] = useState(false)
+  const [modalOpen, setPageModalOpen] = useState(false);
   const openModal = () => setPageModalOpen(true);
   const closeModal = () => setPageModalOpen(false);
     
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const totalArtworks = AIUSWorks.length + OlderWorks.length; // Total number of artworks
+  const totalArtworks = AIUSWorks.length + OlderWorks.length + RecentWorks.length;
+  const artworks = [...RecentWorks, ...AIUSWorks, ...OlderWorks];
 
-  const artworks = [...AIUSWorks, ...OlderWorks];
+  // Monitor modal state changes
+useEffect(() => {
+    console.log("Modal Open:", modalOpen);
+  }, [modalOpen]);
 
-  const changeArtwork = (_ind:number, num:number) => {
-    setCurrentIndex(_ind);
-    setCurrentIndex((index) => {
-      console.log(index)
-      let newIndex = index + num;
-      if (newIndex < 0) newIndex = totalArtworks - 1; // Wrap around to the last artwork
-      if (newIndex >= totalArtworks) newIndex = 0; // Wrap around to the first artwork
+  const changeArtwork = (index: number, offset: number) => {
+    setCurrentIndex((prevIndex) => {
+      let newIndex = prevIndex + offset;
+      if (newIndex < 0) newIndex = totalArtworks - 1;
+      if (newIndex >= totalArtworks) newIndex = 0;
       return newIndex;
     });
-    openModal()
+    console.log(currentIndex)
+    if (!modalOpen) openModal();
   };
 
-  const handleKeyDown = (e:any) => {
-    if (modalOpen==true) {
-        closeModal();
-        if (e.key === "ArrowLeft") {
-            
-        changeArtwork(currentIndex, -1); // Previous artwork
-        } else if (e.key === "ArrowRight") {
-        changeArtwork(currentIndex, 1); // Next artwork
-        }
-    }
-  };
-  
-  return(
+  return (
     <> 
-     <div className="mt-[5%] mx-[5%] flex flex-col h-fit mb-[2%]">
-    <div >
-      <Heading name="Portfolio"/>
-    </div>  
-  <Subtitle text="AI & Us Works" num="1"/>
-  <div className="flex gap-10 flex-wrap items-center justify-center ">
-    {
-      AIUSWorks.map(({name, img, desc}, index)=>(
-        <Artwork name={name} img={img} key={index} index={index} desc={desc} classname={""} changeArtwork={changeArtwork}/>
-      )) 
-    }
-  </div>
-  <Subtitle text="Older Works" num="2"/>
-  <div className="flex gap-10 flex-wrap items-center justify-center ">
-    {
-      OlderWorks.map(({name, img}, index)=>(
-        <Artwork name={name} img={img} key={index} index={AIUSWorks.length + index} desc= "" classname={""} changeArtwork={changeArtwork}/>
-      )) 
-    }
-  </div>
-</div>    
-    <Modal
-    isOpen={modalOpen}
-    index={currentIndex}
-    onClose = {closeModal}
-    changeArtwork = {changeArtwork}
-    imgSrc = {artworks[currentIndex].img}
-    imgAlt={artworks[currentIndex].name}
-    text={artworks[currentIndex].name}
-    desc={artworks[currentIndex].desc}/>
+      <div className="mt-[5%] mx-[5%] flex flex-col h-fit mb-[2%]">
+        <Heading name="Portfolio" />
+        <Subtitle text="Recent Works" num="1" />
+        <div className="flex gap-10 flex-wrap items-center justify-center">
+          {RecentWorks.map(({ name, img, desc }, index) => (
+            <Artwork
+              key={index}
+              name={name}
+              img={img}
+              index={index}
+              desc={desc}
+              classname=""
+              changeArtwork={changeArtwork}
+            />
+          ))}
+        </div>
+        <Subtitle text="AI & Us Works" num="2" />
+        <div className="flex gap-10 flex-wrap items-center justify-center">
+          {AIUSWorks.map(({ name, img, desc }, index) => (
+            <Artwork
+              key={index}
+              name={name}
+              img={img}
+              index={index + RecentWorks.length}
+              desc={desc}
+              classname=""
+              changeArtwork={changeArtwork}
+            />
+          ))}
+        </div>
+        <Subtitle text="Older Works" num="3" />
+        <div className="flex gap-10 flex-wrap items-center justify-center">
+          {OlderWorks.map(({ name, img }, index) => (
+            <Artwork
+              key={index}
+              name={name}
+              img={img}
+              index={index + RecentWorks.length + AIUSWorks.length}
+              desc=""
+              classname=""
+              changeArtwork={changeArtwork}
+            />
+          ))}
+        </div>
+      </div>
+
+      {modalOpen && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }} 
+          transition={{ duration: 0.5 }}
+        >
+          <Modal
+            isOpen={modalOpen}
+            index={currentIndex}
+            onClose={closeModal}
+            tempfunct={() => null}
+            changeArtwork={changeArtwork}
+            imgSrc={artworks[currentIndex].img}
+            imgAlt={artworks[currentIndex].name}
+            text={artworks[currentIndex].name}
+            desc={artworks[currentIndex].desc}
+          />
+        </motion.div>
+      )}
     </>
-   
   );
-  }
+}
