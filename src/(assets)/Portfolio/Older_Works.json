@@ -1,12 +1,12 @@
 [
     {
-        "name": "Creation",
-        "img": "/Portfolio/Older-Works/Creation.png",
+        "name": "Observation One",
+        "img": "/Portfolio/Older-Works/Obser1.jpg",
         "desc": ""
     },
     {
-        "name": "Observation One",
-        "img": "/Portfolio/Older-Works/Obser1.jpg",
+        "name": "Observation Two",
+        "img": "/Portfolio/Older-Works/Obser2.jpg",
         "desc": ""
     },
     {
@@ -15,15 +15,16 @@
         "desc": ""
     },
     {
+        "name": "Creation",
+        "img": "/Portfolio/Older-Works/Creation.png",
+        "desc": ""
+    },
+    {
         "name": "Water",
         "img": "/Portfolio/Older-Works/Water.png",
         "desc": ""
     },
-    {
-        "name": "Observation Two",
-        "img": "/Portfolio/Older-Works/Obser2.jpg",
-        "desc": ""
-    },
+
     {
         "name": "Art Gallery",
         "img": "/Portfolio/Older-Works/Illustration2.png",
