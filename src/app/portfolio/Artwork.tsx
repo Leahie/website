@@ -15,7 +15,10 @@ interface ArtProps {
 
 export default function Artwork(props: ArtProps) {
   const [modalOpen, setArtModalOpen] = useState(false);
-  const openModal = () => setArtModalOpen(true);
+  const openModal = () => {
+    setArtModalOpen(true);
+    props.changeArtwork(props.index, 0)
+  }
   const closeModal = () => setArtModalOpen(false);
   const temp_funct = () => setArtModalOpen(false);
 
@@ -30,7 +33,7 @@ export default function Artwork(props: ArtProps) {
       >
         <Image src={props.img} alt={props.name} fill={true} objectFit="cover" className="cursor-pointer" />
       </div>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
@@ -48,7 +51,7 @@ export default function Artwork(props: ArtProps) {
         desc={props.desc}
         />
 
-      </motion.div>
+      </motion.div> */}
     </>
   );
 }

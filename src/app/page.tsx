@@ -74,9 +74,9 @@ export default function Home() {
     transition={{ duration: 0.5 }}
     >
         <Card link="/about" name="About" desc="Learn a little about me!"/>
-        <Card link="/blog" name="Notes" desc="Blogging bout life!"/>
+        {/* <Card link="/blog" name="Notes" desc="Blogging bout life!"/> */}
         <Card link="/portfolio" name="Portfolio" desc="Artwork on Display!"/>
-        <Card link="/projects" name="Projects" desc="Things I'm working on!"/>
+        {/* <Card link="/projects" name="Projects" desc="Things I'm working on!"/> */}
     </motion.div>    
     
       

@@ -33,7 +33,7 @@ useEffect(() => {
 
   const changeArtwork = (index: number, offset: number) => {
     setCurrentIndex((prevIndex) => {
-      let newIndex = prevIndex + offset;
+      let newIndex = index + offset;
       if (newIndex < 0) newIndex = totalArtworks - 1;
       if (newIndex >= totalArtworks) newIndex = 0;
       return newIndex;
